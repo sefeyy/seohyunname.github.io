@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Acme';
+    src: url('../fonts/Acme-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Ibm';
+    src: url('../fonts/IBMPlexSansKR-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Mon';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+  }
+  @font-face {
+    font-family: 'Robo';
+    src: url('../fonts/RobotoSlab-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Sty';
+    src: url('../fonts/Stylish-Regular.ttf');
+  }
+
+
+
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$hdr01 : #{'min(3.4em,34px)'};
+$hdr02 : #{'min(2.5em,25px)'};
+$hdr03 : #{'min(2rem,80px)'};
+$nav01 : #{'min(2em,20px)'};
+$cnt01 : #{'min(14rem,560px)'};
+$cnt02 : #{'min(10rem,400px)'};
+$cnt03 : #{'min(17rem,680px)'};
+$cnt04 : #{'min(16rem,640px)'};
+$cnt05 : #{'min(3em,30px)'};
+$cnt06 : #{'min(1.8em,18px)'};
+$cnt07 : #{'min(8em,80px)'};
+$cnt08 : #{'min(3.5em,35px)'};
+
+
+// 헤더
+.hdrWrap{
+    background: linear-gradient(90deg,#dcceb2 0% , #dbacaf 50%, #daa3ae 100%);
+    header{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        line-height: $hdr03;
+        padding: 40px 0px;
+        font-weight: 700;
+        justify-content: space-between;
+        display: flex;
+        h1{
+            font-size: $hdr01;
+            text-transform: uppercase;
+            font-family: 'Acme';
+        }
+        nav{
+            text-transform: capitalize;
+            font-size: $hdr02;
+            width: calc(100% / 12 * 5);
+            justify-content: space-between;
+            display: flex;
+            font-family: 'Mon';
+            h4{
+            }
+        }
+    }
+}
+
+// 네비게이션 박스
+.navBoxWrap{
+    background-color: #ab727d;
+    .navBox{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        padding: 80px 0px;
+        ul{
+            font-size: $nav01;
+            text-align: center;
+            border-right: 1px solid #000;
+            padding: 0px 100px;
+            font-family: 'Ibm';
+                &:nth-last-child(1){
+                    border-right: 0;
+                }
+            li{
+                text-transform: capitalize;
+                &:nth-child(1){
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+// 이미지
+.images{
+    .img{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    .image{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    &.image.i1{
+            height: $cnt01;
+            width: calc(100% / 12 * 7);
+            background-color: gray;
+            margin-top: 40px;
+            background-image: url('../image/seohyunsub3/content01/img1.jpg');
+    }
+        &.image.i2{
+            background-color: orange;
+            width: calc(100% / 12 * 8);
+            height: $cnt02;
+            right: 0;
+            margin-top: -280px;
+            margin-left: 300px;
+            background-image: url('../image/seohyunsub3/content01/img2.jpg');
+        }
+        &.image.i3{
+            background-color: yellowgreen;
+            width: calc(100% / 12 * 9);
+            height: $cnt03;
+            margin-left: 140px;
+            margin-top: -40px;
+            background-image: url('../image/seohyunsub3/content01/img3.jpg');
+        }
+}
+}
+
+// 배너
+.bnrWrap{
+    margin-top: 80px;
+    .banner{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        .artGroup{
+            width: 300%;
+            justify-content: space-between;
+            display: flex;
+            transition: all 0.5s;
+            li{
+                background-color: #dbacaf;
+                height: $cnt04;
+                width: calc(100% / 3);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                &:nth-child(1){
+                    background-image: url('../image/seohyunsub3/banner/bnr01.jpg');
+                }
+                &:nth-child(2){
+                    background-image: url('../image/seohyunsub3/banner/bnr02.jpg');
+                }
+                &:nth-child(3){
+                    background-image: url('../image/seohyunsub3/banner/bnr03.jpg');
+                }
+            }
+        }
+        .paging{
+            width: calc(100% / 3);
+            left: 0;
+            right: 0;
+            bottom: 5px;
+            position: absolute;
+            margin: 0 auto;
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            li{
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+                border-radius: 20px;
+                float: left;
+                margin: 0px 3px;
+                transition: all 0.5s;
+                &.show{
+                    width: 40px;
+                }
+            }
+        }
+        .btns{
+            width: 100%;
+            height: 10%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+            justify-content: space-between;
+            display: flex;
+        }
+    }
+}
+
+// 텍스트
+.texts{
+    .txt{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .txtLeft{
+            width: calc(100% / 12 * 3);
+            h2{
+                font-size: $cnt05;
+                margin-top: 40px;
+                text-transform: capitalize;
+                font-weight: 700;
+                font-family: 'Acme';
+            }
+        }
+        .txtRight{
+            width: calc(100% / 12 * 7);
+            h5{
+                font-size: $cnt06;
+                font-family: 'Ibm';
+            }
+        }
+    }
+}
+// 푸터
+.ftrWrap{
+    margin-top: 80px;
+    footer{
+        padding: 160px 0px;
+        background-color: #dbacaf;
+        h2{
+            font-size: $cnt07;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Acme';
+        }
+        h5{
+            font-size: $cnt08;
+            text-transform: capitalize;
+            text-align: center;
+            font-family: 'Ibm';
+        }
+    }
+}

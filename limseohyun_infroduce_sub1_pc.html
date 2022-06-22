@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임서현 자기소개 서브1</title>
+    <link rel="stylesheet" href="./scss/reset.css">
+    <link rel="stylesheet" href="./scss/xeicon.min.css">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub1_pc.min.css">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub1_tablet.min.css" media="(max-width:1024px) and (min-width:0px)">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub1_moblie.min.css" media="(max-width:420px) and (min-width:0px)">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(function(){
+
+            var btn = $('.btn');
+            var artGroup = $('.artGroup');
+
+            artGroup.find('article:last').prependTo(artGroup);
+            artGroup.css({marginLeft : '-100%'});
+
+            btn.find('button').first().click(function(){
+                artGroup.animate({
+                    marginLeft : '0%',
+                },500,function(){
+                    artGroup.find('.article:last').prependTo(artGroup);
+                    artGroup.css({
+                        marginLeft : '-100%'
+                    });
+                });
+            });
+
+            btn.find('button').last().click(function(){
+                artGroup.animate({
+                    marginLeft : '-200%',
+                },500,function(){
+                    artGroup.find('.article:first').appendTo(artGroup);
+                    artGroup.css({
+                        marginLeft : '-100%'
+                    });
+                });
+            });
+
+            $('.aco>li').click(function(){
+                $('.aco>li').removeClass('show');
+                $(this).addClass('show');
+            });
+
+
+            var da = parseInt($('span').eq(0).text());
+             var sp = $('.texts span');
+            sp.each(function(a){
+                var dd = $(this).attr('data-num');
+
+            $({percent:0}).animate({percent:dd},{
+                duration:1500,
+                progress: function(){
+                    var num = this.percent;
+                    
+                    $('span').eq(a).text(parseInt(num));
+                    $('.bar').eq(a).css({width:num+'%'});
+                }
+            });
+        });
+    });
+
+    </script>
+</head>
+<body>
+     <!-- 헤더 -->
+     <div class="hdrWrap">
+        <header>
+            <h1><a href="./index.html">lsh★</a></h1>
+            <nav>
+                <h4><a href="./limseohyun_infroduce_sub1_pc.html">introduce</a></h4>
+                <h4><a href="./limseohyun_infroduce_sub2_pc.html">experience</a></h4>
+                <h4><a href="./limseohyun_infroduce_sub3_pc.html">contact</a></h4>
+            </nav>
+        </header>
+    </div>
+    <!-- 네비게이션 박스 -->
+    <div class="navBoxWrap">
+        <div class="navBox">
+            <ul>
+                <li>introduce</li>
+                <li>who am i</li>
+                <li>design skill</li>
+                <li>social skill</li>
+            </ul>
+            <ul>
+                <li>experience</li>
+                <li>trip</li>
+                <li>company</li>
+            </ul>
+            <ul>
+                <li>contact</li>
+                <li>vison</li>
+                <li>contact</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 컨텐츠1 -->
+    <div class="cntWrap">
+        <div class="content cnt01">
+            <header>
+                <h2>"who am i"</h2>
+            </header>
+            <section>
+                <article>
+                    <div class="image">
+                        <div class="artView">
+                        <div class="artGroup">
+                            <div class="article i1"></div>
+                            <div class="article i2"></div>
+                            <div class="article i3"></div>
+                            <div class="article i4"></div>
+                            <div class="article i5"></div>
+                        </div>
+                        <div class="btn">
+                            <button>◀</button>
+                            <button>▶</button>
+                        </div>
+                    </div>
+                </div>
+                    <div class="texts">
+                        <ul class="aco">
+                            <li class="show"><span>#</span> <span>name</span></li>
+                            <li><p>임서현</p></li>
+                            <li><span>#</span> <span>age</span></li>
+                            <li><p>30대</p></li>
+                            <li><span>#</span> <span>e-mail</span></li>
+                            <li><p>sefeyy@naver.com</p></li>
+                            <li><span>#</span> <span>hobby</span></li>
+                            <li><p>책읽기, 음악듣기, 영화보기</p></li>
+                            <li><span>#</span> <span>motto</span></li>
+                            <li><p>항상 최선을 다하자</p></li>
+                        </ul>
+                    </div>
+                </article>
+            </section> 
+        </div>
+    </div>
+    <!-- 컨텐츠2 -->
+    <div class="cntWrap">
+        <div class="content cnt02">
+            <header>
+                <h2>"design skill"</h2>
+            </header>
+            <section>
+                <article>
+                    <div class="image i1">
+                        <h3>ps</h3>
+                    </div>
+                    <div class="texts">
+                        <h3>photoshop</h3>
+                        <h5>
+                            페이지 제작을 위해 보정 및 편집을 통해서<br>최종적인 결과물을 완성해냅니다.
+                        </h5>
+                    </div>
+                </article>
+                <article>
+                    <div class="image i2">
+                        <h3>css</h3>
+                    </div>
+                    <div class="texts">
+                        <h3>css/scss</h3>
+                        <h5>
+                            사이트 구성과 함께 간단한<br>동적인 효과를 구현해냅니다.
+                        </h5>
+                    </div>
+                </article>
+                <article>
+                    <div class="image i3">
+                        <h3>html</h3>
+                    </div>
+                    <div class="texts">
+                        <h3>html</h3>
+                        <h5>
+                            디자인 요소들을 위한 뼈대를<br>형식에 맞추어 재현해냅니다. 
+                        </h5>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <!-- 컨텐츠3 -->
+    <div class="cntWrap">
+        <div class="content cnt03">
+            <header>
+                <h2>"social skill"</h2>
+            </header>
+            <section>
+                <div class="btns">
+                    <div class="texts">
+                        <div class="txtLeft">
+                            <h3>전문성 및 퍼블리셔 기술</h3>
+                        </div>
+                        <div class="txtRight">
+                            <h3><span data-num="85">85</span>%</h3>
+                        </div>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="texts2">
+                        <h3>UI/UX 가이드를 준수해 창의적<br> 
+                            사고를 표현해낼 수 있습니다. </h3>
+                    </div>
+                </div>
+                <div class="btns">
+                    <div class="texts">
+                        <div class="txtLeft">
+                            <h3>책임감 및 성실함</h3>
+                        </div>
+                        <div class="txtRight">
+                            <h3><span data-num="95">95</span>%</h3>
+                        </div>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="texts2">
+                        <h3>책임감을 가지고 맡은 업무에 대해서 <br>
+                            준수하면서 성실히 노력합니다.  </h3>
+                    </div>
+                </div>
+                <div class="btns">
+                    <div class="texts">
+                        <div class="txtLeft">
+                            <h3>커뮤니케이션 및 팀워크</h3>
+                        </div>
+                        <div class="txtRight">
+                            <h3><span data-num="90">90</span>%</h3>
+                        </div>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="texts2">
+                        <h3>항상 남에게 먼저 다가가며, 귀 기울이고 <br>
+                            공감하려는 자세를 갖추었습니다.</h3>
+                    </div>
+                </div>
+                <div class="btns">
+                    <div class="texts">
+                        <div class="txtLeft">
+                            <h3>열정 및 도전정신</h3>
+                        </div>
+                        <div class="txtRight">
+                            <h3><span data-num="98">98</span>%</h3>
+                        </div>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="texts2">
+                        <h3>어떠한 일에 대해서 항상 최선을 다하고<br> 
+                            빛나는 열정을 가지고 있습니다.</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- 푸터 -->
+    <div class="ftrWrap">
+        <footer>
+            <h2>introduce</h2>
+            <h5>seo hyun lim</h5>
+        </footer>
+    </div>
+</body> 
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임서현 자기소개 서브3</title>
+    <link rel="stylesheet" href="./scss/reset.css">
+    <link rel="stylesheet" href="./scss/xeicon.min.css">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub3_pc.min.css">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub3_tablet.min.css" media="(max-width:1024px) and (min-width:0px)">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub3_mobile.min.css" media="(max-width:420px) and (min-width:0px)">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(function(){
+
+            var i = 0;
+
+            $('ul.paging>li').click(paging);
+            $('button').eq(0).click(left);
+            $('button').eq(1).click(right);
+            
+            var auto = setInterval(left,2000);
+
+            function paging(){
+                var ind = $(this).index();
+                $('ul.paging>li').removeClass('show');
+                $(this).addClass('show');
+                $('.artGroup').css('margin-left',ind*-100+'%');
+            };
+
+            function left(){
+               i++;
+               i=i%3;
+               $('ul.paging>li').removeClass('show');
+               $('ul.paging>li').eq(i).addClass('show');
+               $('.artGroup').css('margin-left',i*-100+'%');
+           };
+
+           function right(){
+               i--;
+               i=(i+3)%3;
+               $('ul.paging>li').removeClass('show');
+               $('ul.paging>li').eq(i).addClass('show');
+               $('.artGroup').css('margin-left',i*-100+'%');
+           };
+
+        });
+
+    </script>
+</head>
+<body>
+     <!-- 헤더 -->
+     <div class="hdrWrap">
+        <header>
+            <h1><a href="./index.html">lsh★</a></h1>
+            <nav>
+                <h4><a href="./limseohyun_infroduce_sub1_pc.html">introduce</a></h4>
+                <h4><a href="./limseohyun_infroduce_sub2_pc.html">experience</a></h4>
+                <h4><a href="./limseohyun_infroduce_sub3_pc.html">contact</a></h4>
+            </nav>
+        </header>
+    </div>
+    <!-- 네비게이션 박스 -->
+    <div class="navBoxWrap">
+        <div class="navBox">
+            <ul>
+                <li>introduce</li>
+                <li>who am i</li>
+                <li>design skill</li>
+                <li>social skill</li>
+            </ul>
+            <ul>
+                <li>experience</li>
+                <li>trip</li>
+                <li>company</li>
+            </ul>
+            <ul>
+                <li>contact</li>
+                <li>vison</li>
+                <li>contact</li>
+            </ul>
+        </div>
+    </div>
+    <!-- 이미지 -->
+    <div class="images">
+        <div class="img">
+        <div class="image i1"></div>
+        <div class="image i2"></div>
+        <div class="image i3"></div>
+    </div>
+</div>
+    <!-- 배너 -->
+    <div class="bnrWrap">
+        <div class="banner">
+            <ul class="artGroup">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul class="paging">
+                <li class="show"></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="btns">
+                <button>◀</button>
+                <button>▶</button>
+            </div>
+        </div>
+    </div>
+    <!-- 텍스트 -->
+    <div class="texts">
+        <div class="txt">
+            <div class="txtLeft">
+                <h2>my dream</h2>
+            </div>
+            <div class="txtRight">
+                <h5>
+                    처음 웹퍼블리싱을 접했을때, 주변에서 매우 어렵다는 말들을 들었습니다.<br>
+                    그래서인지 제 마음속에서 제가 진정으로 해낼 수 있을지 걱정이 많았습니다.<br>
+                    하지만 웹퍼블리셔라는 꿈 하나만 가지고 성실히 노력해왔습니다.<br>
+                    저는 일 잘하는 웹퍼블리셔가 되고 싶지만 무엇보다 배려심있으며,<br>
+                    커뮤니케이션을 잘하는 성실한 웹퍼블리셔가 되고 있습니다.
+                </h5>
+            </div>
+        </div>
+    </div>
+    <!-- 푸터 -->
+    <div class="ftrWrap">
+        <footer>
+            <h2>contact</h2>
+            <h5>seo hyun lim</h5>
+        </footer>
+    </div>
+</body>
+</html>

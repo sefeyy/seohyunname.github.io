@@ -1,0 +1,126 @@
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$mi01 : #{'min(19rem,760px)'};
+$ftr01 : #{'min(5em,50px)'};
+$ftr02 : #{'min(2em,20px)'};
+
+
+// 헤더
+.hdrWrap{
+    header{
+        display: block;
+        padding: 40px 0px;
+        h1{
+            text-align: center;
+        }
+        nav{
+            width: 100%;
+        }
+    }
+}
+// 네비게이션 박스
+.navBoxWrap{
+    display: none;
+    .navBox{
+        ul{
+            li{}
+        }
+    }
+}
+// 컨텐츠1
+.cntWrap{
+    margin-top: 40px;
+    .content.cnt01{
+        header{}
+        section{
+            margin-top: 40px;
+            article{
+                .image{
+                    .artView{
+                        .artGroup{
+                            .article{}
+                        }
+                    }
+                }
+                .texts{
+                    line-height: 40px;
+                    .aco{
+                        width: 100%;
+                        li{
+                            &:nth-child(odd){
+                                line-height: 40px;
+                            }
+                            &:nth-child(even){}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 컨텐츠2
+.cntWrap{
+    margin-top: 40px;
+    .content.cnt02{
+        header{}
+        section{
+            margin-top: 40px;
+            article{
+                .image{
+                    h3{
+                        margin-top: -60px;
+                    }
+                }
+                .texts{
+                    h3{}
+                    h5{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 컨텐츠3
+.cntWrap{
+    .content.cnt03{
+        header{}
+        section{
+            margin-top: 120px;
+            flex-wrap: wrap;
+            .btns{
+               width: 100%;
+            .texts{
+                .txtLeft{}
+                .txtRight{}
+            }
+            .bar{}
+            .texts2{
+                h3{}
+            }
+           }
+        }
+    }
+}
+
+// 푸터
+.ftrWrap{
+    margin-top: 40px;
+    footer{
+        padding: 40px 0px;
+        h2{
+            font-size: $ftr01;
+        }
+        h5{
+            font-size: $ftr02;
+        }
+    }
+}

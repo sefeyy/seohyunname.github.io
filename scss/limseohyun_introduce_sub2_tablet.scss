@@ -1,0 +1,128 @@
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$cnt01 : #{'min(13rem,520px)'};
+$cnt02 : #{'min(17rem,680px)'};
+
+// 헤더
+.hdrWrap{
+    header{
+        h1{}
+        nav{
+            h4{}
+        }
+    }
+}
+
+// 네비게이션 박스
+.navBoxWrap{
+    .navBox{
+        padding: 40px 0px;
+        ul{
+           
+            li{}
+        }
+    }
+}
+
+// 컨텐츠1
+.cntWrap{
+    .content.cnt01{
+        header{
+            h2{}
+        }
+        section{
+            .cntTop{
+                article{
+                    .image.i1{
+                        
+                    }
+                    .texts{
+                        h3{}
+                        h5{}
+                    }
+                }
+            }
+            .cntMid{
+                .artView{
+                    .artGroup{
+                        .article{}
+                    }
+                    .btn{}
+                }
+            }
+            .cntBtm{
+                .artLeft{
+                    article{
+                        .texts{
+                            h3{
+                                margin-top: 40px;
+                            }
+                            h5{
+                                margin-bottom: 40px;
+                            }
+                        }
+                        .image.i2{
+                            height: $cnt01;
+                            margin-top: 400px;
+                        }
+                    }
+                }
+                .artRight{
+                    .image.i3{
+                        height: $cnt01;
+                        margin-top: -400px;
+                    }
+                }
+            }
+        }
+    }
+}
+// 컨텐츠2
+.cntWrap{
+    .content.cnt02{
+        header{}
+        section{
+            .artTop{
+                article{
+                    flex-wrap: wrap;
+                    .image.i1{
+                        width: 100%;
+                        height: $cnt02;
+                    }
+                    .texts{
+                        h3{
+                            margin-top: -40px;
+                        }
+                        h5{}
+                    }
+                }
+            }
+            .artMid{
+                margin-top: 40px;
+                article{
+                    flex-wrap: wrap;
+                    flex-direction: column-reverse;
+                    display: flex;
+                    .texts{
+                        h3{}
+                        h5{}
+                    }
+                    .image.i2{
+                        width: 100%;
+                    }
+                }
+            }
+            .artBtm{
+                .image.i3{
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}

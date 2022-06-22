@@ -1,0 +1,134 @@
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$mi01 : #{'min(19rem,760px)'};
+$bnr01 : #{'min(3em,30px)'};
+
+// 헤더
+.hdrWrap{
+    header{
+        display: block;
+        padding: 40px 0px;
+        h1{
+            text-align: center;
+        }
+        nav{
+            width: 100%;
+        }
+    }
+}
+
+// 네비게이션 박스
+.navBoxWrap{
+    display: none;
+    .navBox{
+        ul{
+            li{}
+        }
+    }
+}
+
+// 메인
+.mainWrap{
+    main{
+        padding-bottom: 120px;
+        .video01{
+            display: none;
+            video{}
+        }
+        .image{
+            margin-top: -150px;
+            width: calc(100% / 4 * 3);
+            height: $mi01;
+        }
+        .texts{
+            h2{}
+        }
+    }
+}
+
+// 컨텐츠1
+.cntWrap{
+    margin-top: 40px;
+    .content.cnt01{
+        header{
+            display: block;
+            h2{
+                text-align: center;
+            }
+            .btn{
+                margin-top: 40px;
+                margin: auto;
+            }
+        }
+        section{
+            article{
+                margin: 40px 0px;
+                .image{
+                    margin-top: -30px;
+                }
+                .texts{
+                    padding: 20px 0px;
+                    margin-top: -70px;
+                    h5{
+                        margin-top: -15px;
+                    }
+                    h3{}
+                    h4{}
+                }
+            }
+        }
+    }
+}
+
+// 컨텐츠2
+.cntWrap{
+    margin-top: 40px;
+    .content.cnt02{
+        header{
+            display: block;
+            h2{
+                text-align: center;
+            }
+            .btn{
+                margin: auto;
+            }
+        }
+        section{
+            article{
+                &:nth-child(3){
+                    margin-top: -70px;
+                }
+                &:nth-child(4){
+                    margin-top: -70px;
+                }
+                .text{
+                    h3{}
+                }
+                .image{
+                }
+            }
+        }
+    }
+}
+
+// 배너
+.bnrWrap{
+    .banner{
+        padding: 5px 0px;
+        h3{
+            font-size: $bnr01;
+        }
+        h2{
+            margin-top: -20px;
+        }
+        .btn{
+            margin-top: 10px;
+        }
+    }
+}

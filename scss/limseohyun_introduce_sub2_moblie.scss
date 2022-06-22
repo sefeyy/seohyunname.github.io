@@ -1,0 +1,171 @@
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$cnt01 : #{'min(13rem,520px)'};
+$cnt02 : #{'min(8rem,320px)'};
+$ftr01 : #{'min(5em,50px)'};
+$ftr02 : #{'min(2em,20px)'};
+
+// 헤더
+.hdrWrap{
+    header{
+        display: block;
+        padding: 40px 0px;
+        h1{
+            text-align: center;
+        }
+        nav{
+            width: 100%;
+        }
+    }
+}
+// 네비게이션 박스
+.navBoxWrap{
+    display: none;
+    .navBox{
+        ul{
+            li{}
+        }
+    }
+}
+
+// 컨텐츠1
+.cntWrap{
+    margin-top: 40px;
+    .content.cnt01{
+        header{}
+        section{
+            margin-top: 40px;
+            .cntTop{
+                article{
+                    flex-wrap: wrap;
+                    .image.i1{
+                        width: 100%;
+                        height: $cnt02;
+                    }
+                    .texts{
+                        h3{
+                            margin-top: 40px;
+                            display: none;
+                        }
+                        h5{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .cntMid{
+                margin-top: 40px;
+                .artView{
+                    .artGroup{
+                        .article{
+                            &.article.i3{
+                                display: none;
+                            }
+                            // &.article.i4{
+                            //     display: none;
+                            // }
+                            // &.article.i5{
+                            //     display: none;
+                            // }
+                            // &.article.i6{
+                            //     display: none;
+                            // }
+                            // &.article.i7{
+                            //     display: none;
+                            // }
+                            // &.article.i8{
+                            //     display: none;
+                            // }
+                        }
+                    }
+                    .btn{
+                        display: none;
+                    }
+                }
+            }
+            .cntBtm{
+                margin-top: 40px;
+                .artLeft{
+                    article{
+                        margin-top: -400px;
+                        .texts{
+                            margin-bottom: 60px;
+                            h3{
+                                display: none;
+                            }
+                            h5{
+                                display: none;
+                            }
+                        }
+                        .image.i2{}
+                    }
+                }
+                .artRight{
+                    .image.i3{
+                        margin-top: -150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 컨텐츠2
+.cntWrap{
+    .content.cnt02{
+        header{}
+        section{
+            .artTop{
+                article{
+                    .image.i1{}
+                    .texts{
+                        h3{
+                            display: none;
+                        }
+                        h5{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .artMid{
+                article{
+                    .texts{
+                        h3{
+                            display: none;
+                        }
+                        h5{
+                            display: none;
+                        }
+                    }
+                    .image.i2{
+                        margin-top: -130px;
+                    }
+                }
+            }
+            .artBtm{
+                .image.i3{
+                    display: none;
+                }
+                .texts{}
+            }
+        }
+    }
+}
+.ftrWrap{
+    footer{
+        padding: 40px 0px;
+        h2{
+            font-size: $ftr01;
+        }
+        h5{
+            font-size: $ftr02;
+        }
+    }
+}

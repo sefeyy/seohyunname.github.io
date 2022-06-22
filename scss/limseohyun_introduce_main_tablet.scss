@@ -1,0 +1,121 @@
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$mi01 : #{'min(17rem,680px)'};
+$mi02 : #{'min(7rem,280px)'};
+$mi03 : #{'min(4em,40px)'};
+$cnt01 : #{'min(8rem,320px)'};
+$bnr01 : #{'min(9rem,360px)'};
+$cnt02 : #{'min(4rem,160px)'};
+
+// 헤더
+.hdrWrap{
+    header{
+        h1{}
+        nav{
+            h4{}
+        }
+    }
+}
+
+// 네비게이션 박스
+.navBoxWrap{
+    .navBox{
+        padding: 40px 0px;
+        ul{
+           
+            li{}
+        }
+    }
+}
+// 메인
+.mainWrap{
+    main{
+        padding: 200px 0px;
+        .video01{
+            z-index: 3;
+            video{
+                font-size: $mi02;
+                margin-right: 20px;
+            }
+        }
+        .image{
+            width: calc(100% / 12 * 6);
+            height: $mi01;
+            margin-top: -400px;
+        }
+        .texts{
+            h2{
+                font-size: $mi03;
+                margin-top: -100px;
+            }
+        }
+    }
+}
+// 컨텐츠1
+.cntWrap{
+    margin-top: 20px;
+    .content.cnt01{
+        header{
+            h2{
+                text-align: left;
+            }
+            .btn{
+            }
+        }
+        section{
+            flex-wrap: wrap;
+            article{
+                // // width: calc(100% / 3 - 20px);
+                // width: 100%;
+                // display: block;
+                // display: flex;
+                // flex-direction: column-reverse;
+                width: 100%;
+                margin: 100px 0px;
+                .image{
+                    height: $cnt01;
+                }
+                .texts{
+                    height: $cnt02;
+                    margin-top: -190px;
+                    h5{}
+                    h3{}
+                    h4{}
+                }
+            }
+        }
+
+    }
+}
+
+// 컨텐츠2
+.cntWrap{
+    margin-top: 200px;
+    .content.cnt02{
+        header{}
+        section{
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            article{
+                width: calc(100% / 2 - 10px);
+                float: left;
+                margin: 0px 5px;
+                .text{
+                    h3{}
+                }
+                .image{
+                    height: $bnr01;
+                }
+            }
+        }
+    }
+}

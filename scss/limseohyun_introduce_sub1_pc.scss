@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'Acme';
+    src: url('../fonts/Acme-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Ibm';
+    src: url('../fonts/IBMPlexSansKR-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Mon';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+  }
+  @font-face {
+    font-family: 'Robo';
+    src: url('../fonts/RobotoSlab-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Sty';
+    src: url('../fonts/Stylish-Regular.ttf');
+  }
+
+
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$hdr01 : #{'min(3.4em,34px)'};
+$hdr02 : #{'min(2.5em,25px)'};
+$hdr03 : #{'min(2rem,80px)'};
+$nav01 : #{'min(2em,20px)'};
+$cnt01 : #{'min(11rem,440px)'};
+$cnt02 : #{'min(8rem,320px)'};
+$cnt03 : #{'min(8em,80px)'};
+$cnt04 : #{'min(4em,40px)'};
+$cnt05 : #{'min(1.6em,16px)'};
+$cnt06 : #{'min(3em,30px)'};
+$cnt07 : #{'min(8em,80px)'};
+$cnt08 : #{'min(3.5em,35px)'};
+
+
+// 헤더
+.hdrWrap{
+    background: linear-gradient(90deg,#dcceb2 0% , #dbacaf 50%, #daa3ae 100%);
+    header{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        line-height: $hdr03;
+        padding: 40px 0px;
+        font-weight: 700;
+        justify-content: space-between;
+        display: flex;
+        h1{
+            font-size: $hdr01;
+            text-transform: uppercase;
+            font-family: 'Acme';
+        }
+        nav{
+            text-transform: capitalize;
+            font-size: $hdr02;
+            width: calc(100% / 12 * 5);
+            justify-content: space-between;
+            display: flex;
+            font-family: 'Mon';
+            h4{
+            }
+        }
+    }
+}
+
+// 네비게이션 박스
+.navBoxWrap{
+    background-color: #ab727d;
+    .navBox{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        padding: 80px 0px;
+        ul{
+            font-size: $nav01;
+            text-align: center;
+            border-right: 1px solid #000;
+            padding: 0px 100px;
+            font-family: 'Ibm';
+                &:nth-last-child(1){
+                    border-right: 0;
+                }
+            li{
+                text-transform: capitalize;
+                &:nth-child(1){
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+// 컨텐츠 공통
+.cntWrap{
+    margin-top: 80px;
+    .content{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        header{
+            h2{
+                font-size: $hdr02;
+                text-transform: capitalize;
+                text-align: center;
+                font-family: 'Mon';
+            }
+        }
+        section{
+            margin-top: 80px;
+        }
+    }
+}
+// 컨텐츠1
+.cntWrap{
+    .content.cnt01{
+        header{
+            h2{}
+        }
+        section{
+            article{
+                justify-content: space-between;
+                display: flex;
+                .image{
+                    width: calc(100% / 12 * 8);
+                    .artView{
+                        height: $cnt01;
+                        overflow: hidden;
+                        position: relative;
+                        .artGroup{
+                            width: 500%;
+                            justify-content: space-between;
+                            display: flex;
+                            .article{
+                                width: calc(100% / 12 * 8);
+                                height: $cnt01;
+                                background-color: gray;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                &.article.i1{
+                                    background-image: url('../image/seohyunsub1/content01/img01.jpg');
+                                }
+                                &.article.i2{
+                                    background-image: url('../image/seohyunsub1/content01/img02.jpg');
+                                }
+                                &.article.i3{
+                                    background-image: url('../image/seohyunsub1/content01/img03.jpg');
+                                }
+                                &.article.i4{
+                                    background-image: url('../image/seohyunsub1/content01/img04.jpg');
+                                }
+                                &.article.i5{
+                                    background-image: url('../image/seohyunsub1/content01/img05.jpg');
+                                }
+                            }
+                        }
+                        .btn{
+                            width: 100%;
+                            height: 10%;
+                            margin: auto;
+                            top: 0;
+                            bottom: 0;
+                            position: absolute;
+                            justify-content: space-between;
+                            display: flex;
+                        }
+                    }
+                }
+                .texts{
+                    width: calc(100% / 12 * 4);
+                    .aco{
+                        margin-left: 20px;
+                        li{
+                            font-size: $hdr02;
+                            text-align: center;
+                            &:nth-child(odd){
+                                line-height: 80px;
+                                text-transform: uppercase;
+                                border-top: 1px solid #000;
+                                font-family: 'Robo';
+                            }
+                            &:nth-child(odd).show+li{
+                                height: 80px;
+                            }
+                            &:nth-child(even){
+                                height: 0;
+                                overflow: hidden;
+                                transition: all 0.5s;
+                            }
+                            &:nth-child(even):nth-last-child(1){
+                                border-bottom: 1px solid #000;
+                            }
+                            &:nth-child(even)>p{
+                                font-size: $nav01;
+                                font-family: 'Ibm';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// 컨텐츠2
+.cntWrap{
+    .content.cnt02{
+        header{
+            h2{}
+        }
+        section{
+            justify-content: space-between;
+            display: flex;
+            article{
+                width: calc(100% / 3 - 20px);
+                .image{
+                    height: $cnt02;
+                    background: linear-gradient(90deg,#dcceb2 0% , #dbacaf 50%, #daa3ae 100%);
+                    border-radius: 60%;
+                    h3{
+                        font-size: $cnt03;
+                        text-align: center;
+                        text-transform: uppercase;
+                        padding-top: 100px;
+                        font-weight: 700;
+                    }
+                }
+                .texts{
+                    h3{
+                        font-size: $cnt04;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        line-height: 40px;
+                        margin: 40px 0px;
+                        text-align: center;
+                    }
+                    h5{
+                        font-size: $cnt05;
+                        text-align: center;
+                        font-family: 'Ibm';
+                    }
+                }
+            }
+        }
+ }
+}
+
+// 컨텐츠3
+.cntWrap{
+    .content.cnt03{
+        header{}
+        section{
+            .btns{
+                background-color: gray;
+                height: 40px;
+                width: 100%;
+                border-radius: 5px;
+                position: relative;
+                margin-bottom: 160px;
+                .texts{
+                    justify-content: space-between;
+                    display: flex;
+                    .txtLeft{
+                        h3{
+                            font-size: $hdr02;
+                            font-weight: 700;
+                            margin-top: -40px;
+                           
+                        }
+                    }
+                    .txtRight{
+                        h3{
+                            font-size: $cnt05;
+                            margin-top: -40px;
+                            
+                        }
+                    }
+                }
+                .bar{
+                    background-color: violet;
+                    width: 80%;
+                    height: 40px;
+                    border-radius: 5px;
+                    position: absolute;
+                    z-index: 5;
+                    left: 0;
+                    top : 0;
+                }
+                .texts2{
+                    margin-top: 50px;
+                    h3{
+                        font-size: $cnt05;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 푸터
+.ftrWrap{
+    margin-top: 80px;
+    footer{
+        padding: 160px 0px;
+        background-color: #dbacaf;
+        h2{
+            font-size: $cnt07;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Acme';
+        }
+        h5{
+            font-size: $cnt08;
+            text-transform: capitalize;
+            text-align: center;
+            font-family: 'Ibm';
+        }
+    }
+}

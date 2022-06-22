@@ -1,0 +1,70 @@
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$mi01 : #{'min(19rem,760px)'};
+$bnr01 : #{'min(3em,30px)'};
+$ftr01 : #{'min(5em,50px)'};
+$ftr02 : #{'min(2em,20px)'};
+
+// 헤더
+.hdrWrap{
+    header{
+        display: block;
+        padding: 40px 0px;
+        h1{
+            text-align: center;
+        }
+        nav{
+            width: 100%;
+        }
+    }
+}
+
+// 네비게이션 박스
+.navBoxWrap{
+    display: none;
+    .navBox{
+        ul{
+            li{}
+        }
+    }
+}
+
+// 이미지
+
+// 배너
+
+// 텍스트
+.texts{
+    .txt{
+        text-align: center;
+        // margin: auto;
+        .txtLeft{
+            text-align: center;
+            margin: auto;
+            h2{}
+        }
+        .txtRight{
+            text-align: center;
+            margin: auto;
+            h5{}
+        }
+    }
+}
+.ftrWrap{
+    footer{
+        padding: 40px 0px;
+        h2{
+            font-size: $ftr01;
+        }
+        h5{
+            font-size: $ftr02;
+        }
+    }
+}
+

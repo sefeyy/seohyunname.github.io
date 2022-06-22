@@ -1,0 +1,136 @@
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$cnt01 : #{'min(6rem,240px)'};
+$ftr01 : #{'min(8rem,320px)'};
+$ftr02 : #{'min(10em,100px)'};
+$ftr03 : #{'min(4em,40px)'};
+$cnt02 : #{'min(1.8em,18px)'};
+
+
+// 헤더
+// .hdrWrap{
+//     header{
+//         h1{}
+//         nav{
+//             h4{}
+//         }
+//     }
+// }
+
+// 네비게이션 박스
+.navBoxWrap{
+    .navBox{
+        padding: 40px 0px;
+        // ul{
+           
+        //     li{}
+        // }
+    }
+}
+
+// 컨텐츠1
+// .cntWrap{
+//     .content.cnt01{
+//         header{
+//             h2{}
+//         }
+//         section{
+//             article{
+//                 .image{
+//                     .artView{
+//                         .artGroup{
+//                             article{}
+//                         }
+//                     }
+//                 }
+//                 .texts{
+//                     .aco{
+//                         li{}
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// 컨텐츠2
+.cntWrap{
+    .content.cnt02{
+        // header{
+        //     h2{}
+        // }
+        section{
+            flex-wrap: wrap;
+            article{
+                width: 100%;
+                display: flex;
+                margin: 10px 0px;
+                .image{
+                    width: calc(100% / 8 * 3);
+                }
+                h3{
+                
+                }
+                    .texts{
+                        width: calc(100% / 8 * 4);
+                        h3{
+                            margin-right: 10px;
+
+                        }
+                        h5{
+                            
+                            font-size: $cnt02;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+// 컨텐츠3
+.cntWrap{
+    .content.cnt03{
+        header{}
+        section{
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+            .btns{
+                width: calc(100% / 2 - 20px);
+                .texts{
+                    .txtLeft{
+                        h3{}
+                    }
+                    .txtRight{
+                        h3{}
+                    }
+                }
+                .bar{}
+                .texts2{
+                    h3{}
+                }
+            }
+        }
+    }
+}
+
+
+// 푸터
+.ftrWrap{
+    footer{
+        height: $ftr01;
+        padding: 80px 0px;
+        h2{
+            font-size: $ftr02;
+        }
+        h5{
+            font-size: $ftr03;
+        }
+    }
+}

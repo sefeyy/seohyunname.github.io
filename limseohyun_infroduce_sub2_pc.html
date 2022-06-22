@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>임서현 자기소개 서브2</title>
+    <link rel="stylesheet" href="./scss/reset.css">
+    <link rel="stylesheet" href="./scss/xeicon.min.css">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub2_pc.min.css">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub2_tablet.min.css" media="(max-width:1024px) and (min-width:0px)">
+    <link rel="stylesheet" href="./scss/limseohyun_introduce_sub2_moblie.min.css" media="(max-width:420px) and (min-width:0px)">
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+
+        $(function(){
+
+            var i = 0;
+
+            $('button').eq(0).click(function(){
+                i++;
+                if(i>=5){
+                    i=5;
+                }
+                $('.artGroup').css('margin-left',i*(-100/3)+'%');
+            });
+
+            $('button').eq(1).click(function(){
+                i--;
+                if(i<0){
+                    i=0;
+                }
+                $('.artGroup').css('margin-left',i*(-100/3)+'%');
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+     <!-- 헤더 -->
+     <div class="hdrWrap">
+        <header>
+            <h1><a href="./limseohyun_infroduce_main_pc.html">lsh★</a></h1>
+            <nav>
+                <h4><a href="./limseohyun_infroduce_sub1_pc.html">introduce</a></h4>
+                <h4><a href="./limseohyun_infroduce_sub2_pc.html">experience</a></h4>
+                <h4><a href="./limseohyun_infroduce_sub3_pc.html">contact</a></h4>
+            </nav>
+        </header>
+    </div>
+    <!-- 네비게이션 박스 -->
+    <div class="navBoxWrap">
+        <div class="navBox">
+            <ul>
+                <li>introduce</li>
+                <li>who am i</li>
+                <li>design skill</li>
+                <li>social skill</li>
+            </ul>
+            <ul>
+                <li>experience</li>
+                <li>trip</li>
+                <li>company</li>
+            </ul>
+            <ul>
+                <li>contact</li>
+                <li>vison</li>
+                <li>contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 컨텐츠1 -->
+    <div class="cntWrap">
+        <div class="content cnt01">
+            <header>
+                <h2>"trip"</h2>
+            </header>
+            <section>
+                <div class="cntTop">
+                    <article>
+                        <div class="image i1"></div>
+                        <div class="texts">
+                            <h3><span>#</span> <span>yeosu (2007)</span></h3>
+                            <h5>
+                                이 때가 어머니와 둘이서 처음으로 가본  <br>
+                                여행이었습니다. 패키지로 갔었고, 걷는 코스가<br>
+                                많아서 약간 힘들긴 하였으나 체력도 다지고<br>
+                                어머니와의 우정이 더욱 깊어진듯 하여<br>
+                                뿌듯했던 여행이었습니다.
+                            </h5>
+                        </div>
+                    </article>
+                </div>
+                <div class="cntMid">
+                    <div class="artView">
+                        <div class="artGroup">
+                            <div class="article i1"></div>
+                            <div class="article i2"></div>
+                            <div class="article i3"></div>
+                            <div class="article i4"></div>
+                            <div class="article i5"></div>
+                            <div class="article i6"></div>
+                            <div class="article i7"></div>
+                            <div class="article i8"></div>
+                        </div>
+                        <div class="btn">
+                            <button>◀</button>
+                            <button>▶</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cntBtm">
+                    <div class="artLeft">
+                        <article>
+                            <div class="texts">
+                                <h3></h3><h3><span>#</span> <span>jeju (2019)</span></h3>
+                                <h5>
+                                    제가 지난 여행 중에서 가장 고생한 여행이 무엇인지 꼽으라면<br>
+                                    2019년에 갔던 뚜벅이 제주도여행이었습니다. <br>
+                                    친구랑 저랑 둘 다 운전을 못하다보니 대중교통을<br>
+                                    이용해서 갔었는데,  많이 힘들었던 기억이 납니다. <br>
+                                    그래도 처음 가본 곳에서 대비하지 못했던 상황들을 <br>
+                                    스스로 해결할 수 있었던 뜻깊은 시간이었습니다.<br>
+                                </h5>
+                            </div>
+                            <div class="image i2"></div>
+                        </article>
+                    </div>
+                    <div class="artRight">
+                        <div class="image i3"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- 컨텐츠2 -->
+    <div class="cntWrap">
+        <div class="content cnt02">
+            <header>
+                <h2>"company"</h2>
+            </header>
+            <section>
+                <div class="artTop">
+                <article>
+                    <div class="image i1"></div>
+                    <div class="texts">
+                        <h3><span>#</span> <span>이사OOO (2014~2020)</span></h3>
+                        <h5>
+                            20대의 절반을 보냈다고 했을 정도로 가장 길게 일했었던<br>
+                            '이사OOO'은 저에게 많은 경험을 하게 해준 회사였습니다.<br>
+                            많은 업무와 사람들을 겪으며, 진정으로 소통하는 것이<br>
+                            무엇인지, 일을 해내는 책임감이 무엇인지 등 알게 되었습니다.
+                        </h5>
+                    </div>
+                </article>
+            </div>
+            <div class="artMid">
+                <article>
+                    <div class="texts">
+                        <h3><span>#</span> <span>OO기획 (2021)</span></h3>
+                        <h5>
+                            이때 처음으로 구내식당 근처에 있는 회사에 가서<br>
+                            점심시간이 매우 즐거웠던 기억이 납니다.<br>
+                            회사에서 아침마다 회의를 통해 전날 한일에 대해<br>
+                            브리핑을 하곤 했었습니다. 그래서 남들 앞에서<br>
+                            발표하는 기회를 통해 자신있게<br>
+                            표현을 할 줄 아는 사람이 되었습니다.
+                        </h5>
+                    </div>
+                    <div class="image i2"></div>
+                </article>
+            </div>
+            <div class="artBtm">
+                <article>
+                    <div class="image i3"></div>
+                    <div class="texts">
+                    </div>
+                </article>
+            </div>
+            </section> 
+        </div>
+    </div>
+    <!-- 푸터 -->
+    <div class="ftrWrap">
+        <footer>
+            <h2>experience</h2>
+            <h5>seo hyun lim</h5>
+        </footer>
+    </div>
+</body>
+</html>

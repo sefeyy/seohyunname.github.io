@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'Acme';
+    src: url('../fonts/Acme-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Ibm';
+    src: url('../fonts/IBMPlexSansKR-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Mon';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+  }
+  @font-face {
+    font-family: 'Robo';
+    src: url('../fonts/RobotoSlab-Light.ttf');
+  }
+  @font-face {
+    font-family: 'Sty';
+    src: url('../fonts/Stylish-Regular.ttf');
+  }
+
+html{
+    font-size: 3vw;
+}
+body{
+    font-size: 0.7vw;
+    /* height: 700vw; */
+}
+
+$hdr01 : #{'min(3.4em,34px)'};
+$hdr02 : #{'min(2.5em,25px)'};
+$hdr03 : #{'min(2rem,80px)'};
+$nav01 : #{'min(2em,20px)'};
+$cnt01 : #{'min(8rem,320px)'};
+$cnt02 : #{'min(3em,30px)'};
+$cnt03 : #{'min(7rem,280px)'};
+$cnt04 : #{'min(13rem,520px)'};
+$cnt05 : #{'min(10rem,400px)'};
+$cnt06 : #{'min(11rem,440px)'};
+$cnt07 : #{'min(8em,80px)'};
+$cnt08 : #{'min(3.5em,35px)'};
+
+
+
+// 헤더
+.hdrWrap{
+    background: linear-gradient(90deg,#dcceb2 0% , #dbacaf 50%, #daa3ae 100%);
+    header{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        line-height: $hdr03;
+        padding: 40px 0px;
+        font-weight: 700;
+        justify-content: space-between;
+        display: flex;
+        h1{
+            font-size: $hdr01;
+            text-transform: uppercase;
+            font-family: 'Acme';
+        }
+        nav{
+            text-transform: capitalize;
+            font-size: $hdr02;
+            width: calc(100% / 12 * 5);
+            justify-content: space-between;
+            display: flex;
+            font-family: 'Mon';
+            h4{
+            }
+        }
+    }
+}
+
+// 네비게이션 박스
+.navBoxWrap{
+    background-color: #ab727d;
+    .navBox{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        padding: 80px 0px;
+        ul{
+            font-size: $nav01;
+            text-align: center;
+            border-right: 1px solid #000;
+            padding: 0px 100px;
+            font-family: 'Ibm';
+                &:nth-last-child(1){
+                    border-right: 0;
+                }
+            li{
+                text-transform: capitalize;
+                &:nth-child(1){
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+// 컨텐츠 공통
+.cntWrap{
+    margin-top: 80px;
+    .content{
+        width: 80%;
+        max-width: 1080px;
+        margin: 0 auto;
+        header{
+            h2{
+                font-size: $hdr02;
+                text-align: center;
+                text-transform: capitalize;
+                font-family: 'Mon';
+            }
+        }
+        section{
+            margin-top: 80px;
+        }
+    }
+}
+
+// 컨텐츠1
+
+.cntWrap{
+    .content.cnt01{
+        header{}
+        section{
+            .cntTop{
+                article{
+                    justify-content: space-between;
+                    display: flex;
+                    .image.i1{
+                        background-color: gray;
+                        height: $cnt01;
+                        width: calc(100% / 12 * 7);
+                        background-image: url('../image/seohyunsub2/content01/yeosu/img1.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .texts{
+                        font-family: 'Ibm';
+                        h3{
+                            font-size: $cnt02;
+                            line-height: 40px;
+                            margin-top: 40px;
+                            text-transform: uppercase;
+                        }
+                        h5{
+                            font-size: $nav01;
+                            margin-top: 40px;
+                        }
+                    }
+                }
+            }
+            .cntMid{
+                margin-top: 40px;
+                .artView{
+                    overflow: hidden;
+                    position: relative;
+                    .artGroup{
+                        width: 270%;
+                        justify-content: space-between;
+                        display: flex;
+                        transition: all 0.5s; 
+                        article{
+                            width: calc(100% / 8);
+                            height: $cnt03;
+                            margin: 0px 5px;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            &.article.i1{
+                                background-image: url('../image/seohyunsub2/content01/yeosu/img2.jpeg');
+                            }
+                            &.article.i2{
+                                background-image: url('../image/seohyunsub2/content01/yeosu/img3.jpg');
+                            }
+                            &.article.i3{
+                                background-image: url('../image/seohyunsub2/content01/yeosu/img4.jpg');
+                            }
+                            &.article.i4{
+                                background-image: url('../image/seohyunsub2/content01/yeosu/img5.jpeg');
+                            }
+                            &.article.i5{
+                                background-image: url('../image/seohyunsub2/content01/yeosu/img6.jpg');
+                            }
+                            &.article.i6{
+                                background-image: url('../image/seohyunsub2/content01/yeosu/img7.jpg');
+                            }
+                            &.article.i7{
+                                background-image: url('../image/seohyunsub2/content01/yeosu/img8.jpg');
+                            }
+                            &.article.i8{
+                                background-image: url('../image/seohyunsub2/content01/yeosu/img9.jpg');
+                            }
+                        }
+                    }
+                    .btn{
+                        width: 100%;
+                        height: 10%;
+                        top: 0;
+                        bottom : 0;
+                        margin: auto;
+                        position: absolute;
+                        justify-content: space-between;
+                        display: flex;
+                    }
+                }
+            }
+            .cntBtm{
+                margin-top: 40px;
+                .artLeft{
+                    article{
+                        justify-content: space-between;
+                        display: flex;
+                        .texts{
+                            font-family: 'Ibm';
+                            h3{
+                                font-size: $cnt02;
+                                text-transform: uppercase;
+                                margin-top: 120px;
+                            }
+                            h5{
+                                font-size: $nav01;
+                                margin-top: 40px;
+                            }
+                        }
+                        .image.i2{
+                            width: calc(100% / 12 * 5);
+                            height: $cnt04;
+                            background-color: gray;
+                            background-image: url('../image/seohyunsub2/content01/jeju/img01.jpg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+                .artRight{
+                    .image.i3{
+                        background-color: gray;
+                            height: $cnt03;
+                            width: calc(100% / 12 * 6.8);
+                            margin-top: -120px;
+                            background-image: url('../image/seohyunsub2/content01/jeju/img02.jpg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 컨텐츠2
+.cntWrap{
+    .content.cnt02{
+        header{
+            h2{}
+        }
+        section{
+            .artTop{
+                // width: calc(100% / 12 * 6);
+                article{
+                justify-content: space-between;
+                display: flex;
+                .image{
+                    background-color: gray;
+                    width: calc(100% / 12 * 6 - 20px);
+                    height: $cnt05;
+                    background-image: url('../image/seohyunsub2/content02/company01/img1.jpg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .texts{
+                    width: calc(100% / 12 * 6);
+                    margin-top: 120px;
+                    font-family: 'Ibm';
+                    h3{
+                        font-size: $cnt02;
+                    }
+                    h5{
+                        font-size: $nav01;
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+        .artMid{
+            article{
+                justify-content: space-between;
+                display: flex;
+                .image{
+                    background-color: gray;
+                    width: calc(100% / 12 * 6 - 20px);
+                    height: $cnt05;
+                    background-image: url('../image/seohyunsub2/content02/company02/img1.jpg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .texts{
+                    margin-top: 80px;
+                    font-family: 'Ibm';
+                    h3{
+                        font-size: $cnt02;
+                    }
+                    h5{
+                        font-size: $nav01;
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+        .artBtm{
+            article{
+                .image{
+                    height: $cnt06;
+                    background-color: gray;
+                    width: calc(100% / 12 * 6);
+                    background-image: url('../image/seohyunsub2/content02/img.jpg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .texts{}
+            }
+        }
+    }
+    }
+}
+
+// 푸터
+.ftrWrap{
+    margin-top: 80px;
+    footer{
+        padding: 160px 0px;
+        background-color: #dbacaf;
+        h2{
+            font-size: $cnt07;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Acme';
+        }
+        h5{
+            font-size: $cnt08;
+            text-transform: capitalize;
+            text-align: center;
+            font-family: 'Ibm';
+        }
+    }
+}
